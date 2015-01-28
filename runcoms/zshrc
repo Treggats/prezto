@@ -24,3 +24,4 @@ if [[ -z $TMUX && -f "$HOME/.bin/tmux_default_session" ]]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
