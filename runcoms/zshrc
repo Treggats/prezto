@@ -17,3 +17,8 @@ fi
 if [[ -f "${ZDOTDIR:-$HOME}/.exports" ]]; then
 	source "${ZDOTDIR:-$HOME}/.exports"
 fi
+
+function chpwd() {
+	emulate -L zsh
+	ls
+}
