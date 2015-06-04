@@ -36,7 +36,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'tmux' \
   'ssh' \
-  'z'
+  'z' \
+  'ctrl_z'
 
 #
 # Editor
