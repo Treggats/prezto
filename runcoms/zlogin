@@ -42,3 +42,4 @@ function chpwd() {
 }
 
 setopt clobber
+
