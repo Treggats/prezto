@@ -28,3 +28,10 @@ if (( $+commands[keychain] )); then
 		print
 	fi
 fi
+
+if [[ -a /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]; then
+	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+if [[ -a $HOME/.zlogin.local ]]; then
+	source $HOME/.zlogin.local
+fi
