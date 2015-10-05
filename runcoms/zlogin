@@ -35,3 +35,8 @@ fi
 if [[ -a $HOME/.zlogin.local ]]; then
 	source $HOME/.zlogin.local
 fi
+
+function chpwd() {
+	emulate -L zsh
+	ls
+}
