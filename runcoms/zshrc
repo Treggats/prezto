@@ -17,3 +17,7 @@ fi
 if [[ -f "${ZDOTDIR:-$HOME}/.exports" ]]; then
 	source "${ZDOTDIR:-$HOME}/.exports"
 fi
+
+if [[ -z $TMUX && -f "$HOME/.bin/tmux_default_session" ]]; then
+	`which python` $HOME/.bin/tmux_default_session
+fi
