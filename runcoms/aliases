@@ -1,1 +1,2 @@
 alias t='tmux attach -dt'
+alias tl='tmux ls'
