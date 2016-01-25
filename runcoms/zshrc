@@ -25,8 +25,3 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function chpwd() {
-	emulate -L zsh
-	ls
-}
-
