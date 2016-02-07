@@ -18,10 +18,5 @@ if [[ -f "${ZDOTDIR:-$HOME}/.exports" ]]; then
 	source "${ZDOTDIR:-$HOME}/.exports"
 fi
 
-if [[ -z $TMUX && -f "$HOME/.bin/tmux_default_session" ]]; then
-	eval $(keychain --eval --agents ssh id_rsa)
-	`which python` $HOME/.bin/tmux_default_session
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
