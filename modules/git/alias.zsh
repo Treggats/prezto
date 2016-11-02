@@ -79,6 +79,7 @@ alias gf='git fetch'
 alias gfc='git clone'
 alias gfm='git pull'
 alias gfr='git pull --rebase origin "$(git-branch-current 2> /dev/null)"'
+alias gfru='git pull --rebase upstream "$(git-branch-current 2> /dev/null)"'
 
 # Grep (g)
 alias gg='git grep'
