@@ -24,13 +24,16 @@ fi
 
 if (( $+commands[keychain] )); then
 	if [[ -t 0 || -t 1 ]]; then
-		eval $(keychain --eval --agents ssh id_rsa)
+		eval $(keychain --eval --agents ssh id_rsa id_ed25519)
 		print
 	fi
 fi
 
 if [[ -a /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]; then
 	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+fi
+if [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
+  source /usr/bin/virtualenvwrapper.sh
 fi
 if [[ -a $HOME/.zlogin.local ]]; then
 	source $HOME/.zlogin.local
