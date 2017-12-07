@@ -48,6 +48,16 @@ path=(
 )
 
 #
+# Aliases
+#
+source $HOME/.aliases
+
+#
+# Exports
+#
+source $HOME/.exports
+
+#
 # Less
 #
 
