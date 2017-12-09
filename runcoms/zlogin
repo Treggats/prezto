@@ -14,35 +14,13 @@
   fi
 } &!
 
-# Print a random, hopefully interesting, adage.
-if (( $+commands[fortune] )); then
-  if [[ -t 0 || -t 1 ]]; then
+# Execute code only if STDERR is bound to a TTY.
+[[ -o INTERACTIVE && -t 2 ]] && {
+
+  # Print a random, hopefully interesting, adage.
+  if (( $+commands[fortune] )); then
     fortune -s
     print
   fi
-fi
 
-if (( $+commands[keychain] )); then
-	if [[ -t 0 || -t 1 ]]; then
-		eval $(keychain --eval --agents ssh id_rsa id_ed25519)
-		print
-	fi
-fi
-
-if [[ -a /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]; then
-	source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-fi
-if [[ -a /usr/bin/virtualenvwrapper.sh ]]; then
-  source /usr/bin/virtualenvwrapper.sh
-fi
-if [[ -a $HOME/.zlogin.local ]]; then
-	source $HOME/.zlogin.local
-fi
-
-function chpwd() {
-	emulate -L zsh
-	ls
-}
-
-setopt clobber
-
+} >&2
